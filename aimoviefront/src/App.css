@@ -1,0 +1,218 @@
+/* General Styles */
+/* Apply to Body or Main Wrapper */
+.body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #121212 0%, #1b1b1b 100%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background Glow Effect */
+.body::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(34, 143, 178, 0.4) 0%, transparent 70%);
+  filter: blur(150px);
+  z-index: -1;
+}
+
+.body::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(34, 143, 178, 0.3) 0%, transparent 70%);
+  filter: blur(200px);
+  z-index: -1;
+}
+
+/* Center Form Box */
+.form-container {
+  position: relative;
+  z-index: 1; /* Ensure the form is above the glow */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background: #2d2d2d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background: #1b1b1b;
+  color: white;
+  font-size: 1rem;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.best-results {
+  background: #6a1b9a;
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 10px;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+
+.toggle-switch {
+  transform: scale(1.5);
+}
+
+.generate-btn,
+.clear-btn {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.generate-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.clear-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Footer */
+.footer-text {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* IMDb Section */
+.imdb-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.imdb-label {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Input Field Styles */
+.input-field {
+  width: calc(100% - 20px); /* Reduce width to add padding */
+  background: #1b1b1b;
+  color: white;
+  padding: 10px;
+  margin-bottom: 15px; /* Add space between fields */
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't overflow the width */
+}
+
+/* Form Container */
+
+
+/* Ensure Inputs Stay Aligned Properly */
+.imdb-container .input-field,
+.toggle-container .input-field {
+  width: calc(100% - 20px); /* Match width adjustment */
+}
+
+/* Button Styles */
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #228fb2; /* Match theme color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #1a6c8e; /* Add hover effect */
+}
+
+/* Toggle Section */
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.toggle-label {
+  color: white;
+  font-size: 1rem;
+}
+
+.best-results {
+  color: #228fb2;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
